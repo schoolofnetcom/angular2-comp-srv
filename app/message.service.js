@@ -9,23 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var message_service_1 = require("./message.service");
-var AppComponent = (function () {
-    function AppComponent(messageService) {
-        this.messageService = messageService;
+var Alert = (function () {
+    function Alert() {
     }
-    AppComponent.prototype.ngOnInit = function () {
-        this.messages = this.messageService.messages;
-    };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app.component.html',
-            moduleId: module.id
-        }), 
-        __metadata('design:paramtypes', [message_service_1.MessageService])
-    ], AppComponent);
-    return AppComponent;
+    return Alert;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.Alert = Alert;
+var MessageService = (function () {
+    function MessageService() {
+        this.messages = [];
+    }
+    MessageService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], MessageService);
+    return MessageService;
+}());
+exports.MessageService = MessageService;
+//# sourceMappingURL=message.service.js.map

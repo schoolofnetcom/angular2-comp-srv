@@ -12,14 +12,24 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 var forms_1 = require("@angular/forms");
+var task_edit_component_1 = require("./task/task-edit.component");
+var task_list_component_1 = require("./task/task-list.component");
+var app_routing_1 = require("./app.routing");
+var task_service_1 = require("./task/task.service");
+var task_new_component_1 = require("./task/task-new.component");
+var ng2_bootstrap_1 = require('ng2-bootstrap/ng2-bootstrap');
+var message_service_1 = require("./message.service");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, app_component_1.TaskEditComponent],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, app_routing_1.routing, ng2_bootstrap_1.AlertModule],
+            declarations: [
+                app_component_1.AppComponent, task_edit_component_1.TaskEditComponent, task_list_component_1.TaskListComponent, task_new_component_1.TaskNewComponent
+            ],
+            bootstrap: [app_component_1.AppComponent],
+            providers: [task_service_1.TaskService, message_service_1.MessageService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

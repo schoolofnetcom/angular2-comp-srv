@@ -9,23 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var message_service_1 = require("./message.service");
-var AppComponent = (function () {
-    function AppComponent(messageService) {
-        this.messageService = messageService;
+var router_1 = require('@angular/router');
+var task_service_1 = require("./task.service");
+var TaskNewComponent = (function () {
+    function TaskNewComponent(taskService, router) {
+        this.taskService = taskService;
+        this.router = router;
+        this.task = {
+            id: 0,
+            name: ''
+        };
     }
-    AppComponent.prototype.ngOnInit = function () {
-        this.messages = this.messageService.messages;
+    TaskNewComponent.prototype.submit = function () {
+        this.taskService.createTask(this.task);
+        this.router.navigate(['tasks', 'list']);
     };
-    AppComponent = __decorate([
+    TaskNewComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app.component.html',
+            selector: 'task-new',
+            templateUrl: 'task-new.component.html',
             moduleId: module.id
         }), 
-        __metadata('design:paramtypes', [message_service_1.MessageService])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [task_service_1.TaskService, router_1.Router])
+    ], TaskNewComponent);
+    return TaskNewComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.TaskNewComponent = TaskNewComponent;
+//# sourceMappingURL=task-new.component.js.map
