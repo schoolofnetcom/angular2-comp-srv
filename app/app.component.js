@@ -8,7 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 var message_service_1 = require("./message.service");
 var AppComponent = (function () {
     function AppComponent(messageService) {
@@ -17,15 +18,15 @@ var AppComponent = (function () {
     AppComponent.prototype.ngOnInit = function () {
         this.messages = this.messageService.messages;
     };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app.component.html',
-            moduleId: module.id
-        }), 
-        __metadata('design:paramtypes', [message_service_1.MessageService])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        templateUrl: 'app.component.html',
+        moduleId: module.id
+    }),
+    __metadata("design:paramtypes", [message_service_1.MessageService])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

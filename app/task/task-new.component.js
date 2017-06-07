@@ -8,8 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var task_service_1 = require("./task.service");
 var TaskNewComponent = (function () {
     function TaskNewComponent(taskService, router) {
@@ -24,15 +25,16 @@ var TaskNewComponent = (function () {
         this.taskService.createTask(this.task);
         this.router.navigate(['tasks', 'list']);
     };
-    TaskNewComponent = __decorate([
-        core_1.Component({
-            selector: 'task-new',
-            templateUrl: 'task-new.component.html',
-            moduleId: module.id
-        }), 
-        __metadata('design:paramtypes', [task_service_1.TaskService, router_1.Router])
-    ], TaskNewComponent);
     return TaskNewComponent;
 }());
+TaskNewComponent = __decorate([
+    core_1.Component({
+        selector: 'task-new',
+        templateUrl: 'task-new.component.html',
+        moduleId: module.id
+    }),
+    __metadata("design:paramtypes", [task_service_1.TaskService,
+        router_1.Router])
+], TaskNewComponent);
 exports.TaskNewComponent = TaskNewComponent;
 //# sourceMappingURL=task-new.component.js.map

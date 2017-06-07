@@ -7,7 +7,7 @@ import {TaskListComponent} from "./task/task-list.component";
 import {routing} from "./app.routing";
 import {TaskService} from "./task/task.service";
 import {TaskNewComponent} from "./task/task-new.component";
-import {AlertModule} from 'ng2-bootstrap/ng2-bootstrap';
+import {AlertModule} from 'ng2-bootstrap';
 import {MessageService} from "./message.service";
 
 

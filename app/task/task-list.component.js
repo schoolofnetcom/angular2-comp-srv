@@ -8,8 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var task_service_1 = require("./task.service");
 var TaskListComponent = (function () {
     function TaskListComponent(taskService, router) {
@@ -25,15 +26,15 @@ var TaskListComponent = (function () {
     TaskListComponent.prototype.ngOnInit = function () {
         this.tasks = this.taskService.getTasks();
     };
-    TaskListComponent = __decorate([
-        core_1.Component({
-            selector: 'task-list',
-            templateUrl: 'task-list.component.html',
-            moduleId: module.id
-        }), 
-        __metadata('design:paramtypes', [task_service_1.TaskService, router_1.Router])
-    ], TaskListComponent);
     return TaskListComponent;
 }());
+TaskListComponent = __decorate([
+    core_1.Component({
+        selector: 'task-list',
+        templateUrl: 'task-list.component.html',
+        moduleId: module.id
+    }),
+    __metadata("design:paramtypes", [task_service_1.TaskService, router_1.Router])
+], TaskListComponent);
 exports.TaskListComponent = TaskListComponent;
 //# sourceMappingURL=task-list.component.js.map

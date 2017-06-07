@@ -8,8 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var task_service_1 = require("./task.service");
 var message_service_1 = require("../message.service");
 var TaskEditComponent = (function () {
@@ -36,15 +37,18 @@ var TaskEditComponent = (function () {
             }
         });
     };
-    TaskEditComponent = __decorate([
-        core_1.Component({
-            selector: 'task-edit',
-            templateUrl: 'task-edit.component.html',
-            moduleId: module.id
-        }), 
-        __metadata('design:paramtypes', [task_service_1.TaskService, router_1.ActivatedRoute, router_1.Router, message_service_1.MessageService])
-    ], TaskEditComponent);
     return TaskEditComponent;
 }());
+TaskEditComponent = __decorate([
+    core_1.Component({
+        selector: 'task-edit',
+        templateUrl: 'task-edit.component.html',
+        moduleId: module.id
+    }),
+    __metadata("design:paramtypes", [task_service_1.TaskService,
+        router_1.ActivatedRoute,
+        router_1.Router,
+        message_service_1.MessageService])
+], TaskEditComponent);
 exports.TaskEditComponent = TaskEditComponent;
 //# sourceMappingURL=task-edit.component.js.map

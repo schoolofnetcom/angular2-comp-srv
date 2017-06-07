@@ -1,5 +1,6 @@
 "use strict";
-var router_1 = require('@angular/router');
+Object.defineProperty(exports, "__esModule", { value: true });
+var router_1 = require("@angular/router");
 var task_list_component_1 = require("./task/task-list.component");
 var task_edit_component_1 = require("./task/task-edit.component");
 var task_new_component_1 = require("./task/task-new.component");
